@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+NAME=$1
+SRC=$NAME.asm
+BIN=$NAME.exe
+
+nasm -f bin $SRC -o $BIN && hexdump -C $BIN && wine $BIN
